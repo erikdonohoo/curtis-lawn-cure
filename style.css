@@ -37,6 +37,10 @@ body, html {
   font-size: 14px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 section, footer {
   width: 959px;
   margin: 0 auto;
@@ -49,7 +53,6 @@ header {
 }
 
 header > section {
-  width: 959px;
   display: flex;
   flex-direction: row;
 }
@@ -145,14 +148,90 @@ article > h2 {
   margin: 40px 0;
   text-align: center;
   color: #50bf50;
-  font-size: 2.1em;
+  font-size: 1.9em;
   font-style: italic;
 }
 
 article > p {
   color: #7c7c7c;
   line-height: 35px;
-  font-size: 1.8em;
+  font-size: 1.6em;
   margin-left: 55px;
   margin-right: 55px;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 958px) {
+  section, footer {
+    width: 100%;
+  }
+
+  section:not(.banner):not(.header-inner), footer {
+    padding: 0 15px;
+  }
+
+  .banner button {
+    display: none;
+  }
+
+  .nav {
+    font-size: 10px;
+  }
+
+  .banner img {
+    max-width: 100%;
+  }
+
+  article > p {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}
+
+@media (max-width: 799px) {
+  .header-inner {
+    flex-direction: column;
+    position: relative;
+  }
+
+  .logo-container {
+    display: block;
+  }
+
+  .header-contact {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+
+  nav, nav > ul {
+    padding-left: 0px;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  article h2 > img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 524px) {
+  .logo-container {
+    text-align: center;
+  }
+  .header-contact {
+    position: initial;
+    align-items: center;
+    padding: 0;
+  }
+  .nav {
+    text-align: center;
+    padding: 10px 0;
+  }
+  nav {
+    display: none;
+  }
 }
