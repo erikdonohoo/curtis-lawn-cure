@@ -131,11 +131,12 @@ nav {
 }
 
 .banner {
-  position: relative;
-}
-
-.banner img {
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.4);
+  position: relative;
+  background-image: url(images/HOME/BannerImage.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 366px;
 }
 
 .banner-btn {
@@ -179,8 +180,9 @@ article > p {
     font-size: 10px;
   }
 
-  .banner img {
+  .banner {
     max-width: 100%;
+    height: 275px;
   }
 
   article > p {
@@ -218,6 +220,12 @@ article > p {
   }
 }
 
+@media (max-width: 710px) {
+  .banner {
+    height: 225px;
+  }
+}
+
 @media (max-width: 524px) {
   .logo-container {
     text-align: center;
@@ -227,11 +235,29 @@ article > p {
     align-items: center;
     padding: 0;
   }
+  .phone a {
+    color: #50bf50;
+  }
+  header {
+    padding: 15px;
+  }
+  .banner {
+    background-position: 99% 0;
+  }
+  .social {
+    margin-top: 15px;
+  }
   .nav {
     text-align: center;
     padding: 10px 0;
   }
   nav {
     display: none;
+  }
+}
+
+@media (max-width: 395px) {
+  .banner {
+    height: 175px;
   }
 }
