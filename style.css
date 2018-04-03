@@ -145,7 +145,7 @@ nav {
   bottom: 65px;
 }
 
-article > h2 {
+article h2 {
   margin: 40px 0;
   text-align: center;
   color: #50bf50;
@@ -153,7 +153,62 @@ article > h2 {
   font-style: italic;
 }
 
-article > p {
+.split {
+  display: flex;
+  flex-direction: row;
+}
+
+.call-out-bubble-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.call-out-bubble {
+	position: relative;
+  background: #1d5e22;
+  padding: 10px;
+  border-radius: 20px;
+  color: white;
+  font-size: 20px;
+}
+
+.call-out-bubble h3 {
+  margin: 0;
+  text-align: center;
+  font-style: italic;
+}
+
+.call-out-inner {
+  border: 2px solid white;
+  border-radius: 15px;
+  padding: 4px 20px;
+}
+
+.call-out-bubble:after {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(29, 94, 34, 0);
+	border-top-color: #1d5e22;
+	border-width: 20px;
+	margin-left: -20px;
+}
+
+.split ul p {
+  margin-left: 5px;
+}
+
+.split-left, .split-right {
+  flex: 50%;
+}
+
+article p {
   color: #7c7c7c;
   line-height: 35px;
   font-size: 1.6em;
@@ -161,11 +216,25 @@ article > p {
   margin-right: 55px;
 }
 
+.embellish {
+  border-bottom: 2px solid #50bf50;
+  padding-bottom: 4px;
+  margin: 0 auto;
+}
+
 /* Responsive Styles */
 
 @media (max-width: 958px) {
   section, footer {
     width: 100%;
+  }
+
+  .split {
+    flex-direction: column;
+  }
+
+  .split-left, .split-right {
+    flex: 100%;
   }
 
   section:not(.banner):not(.header-inner), footer {
