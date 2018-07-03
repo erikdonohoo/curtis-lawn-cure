@@ -222,6 +222,56 @@ article p {
   margin: 0 auto;
 }
 
+.pricing-table {
+  margin: 40px auto 0 auto;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-table .row {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.pricing-table .row.head > div {
+  background: #1d5e22!important;
+  color: white!important;
+}
+
+.pricing-table .row div {
+  flex: 1;
+  padding: 10px 0;
+  text-align: center;
+  margin: 0 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pricing-table tr td {
+  padding: 10px 0;
+}
+
+.pricing-table .row:nth-child(odd) div {
+  background: #78C173;
+}
+
+.pricing-table .row:nth-child(even) div {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.pricing-detail {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.pricing-detail p {
+  margin: 5px 0;
+}
+
 /* Responsive Styles */
 
 @media (max-width: 958px) {
