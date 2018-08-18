@@ -2,9 +2,10 @@
   "name": "curtis-lawn-cure",
   "version": "1.0.0",
   "description": "Cutis Lawn Cure Website",
-  "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "build": "webpack",
+    "serve": "webpack-dev-server --open"
   },
   "repository": {
     "type": "git",
