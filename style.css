@@ -272,10 +272,40 @@ article p {
   margin: 5px 0;
 }
 
+.employees {
+  display: flex;
+  flex-direction: row;
+}
+
+.employee {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.employee img {
+  max-width: 250px;
+  transition: all .1s ease-in;
+}
+
+.employee img:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 5px 7px rgba(0,0,0,.35);
+}
+
 /* Responsive Styles */
 
 @media (max-width: 958px) {
   section, footer {
+    width: 100%;
+  }
+
+  .employees {
+    flex-direction: column;
+  }
+
+  .employee {
     width: 100%;
   }
 
