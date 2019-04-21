@@ -4,10 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build && npm run copy-files",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "copy-files": "cp -r dist/ ../api/public && mv ../api/public/index.html ../api/resources/views"
   },
   "private": true,
   "dependencies": {

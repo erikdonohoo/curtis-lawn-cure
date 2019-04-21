@@ -1,4 +1,5 @@
 <?php
+use Illuminate\Support\Facades\View;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,5 +13,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    View::addExtension('html', 'php');
+    return View::make('index');
+});
+
+Route::get('/{any}', function () {
+    View::addExtension('html', 'php');
+    return View::make('index');
 });
