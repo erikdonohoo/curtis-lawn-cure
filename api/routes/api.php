@@ -13,5 +13,5 @@ use Illuminate\Http\Request;
 |
 */
 Route::get('me', function () {
-    return 'BRO';
+    return ['name' => 'Bro'];
 });
