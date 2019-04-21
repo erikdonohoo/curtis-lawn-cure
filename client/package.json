@@ -4,11 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build && npm run copy-files",
+    "build": "ng build --aot --prod --build-optimizer --vendor-chunk && npm run copy-files",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "copy-files": "cp -r dist/ ../api/public && mv ../api/public/index.html ../api/resources/views"
+    "copy-files": "cd ../api/public && git clean -Xfd && cd ../../client && cp -r dist/ ../api/public && mv ../api/public/index.html ../api/resources/views"
   },
   "private": true,
   "dependencies": {
