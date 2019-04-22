@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "copy-files": "cd ../public && cd ../client && cp -r dist/ ../public && mv ../public/index.html ../resources/views"
+    "copy-files": " cp -r dist/ ../public && mv ../public/index.html ../resources/views"
   },
   "private": true,
   "dependencies": {
