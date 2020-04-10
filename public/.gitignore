@@ -1,0 +1,7 @@
+*
+!.gitignore
+!index.php
+!robots.txt
+!favicon.ico
+!.htaccess
+!web.config
