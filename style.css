@@ -323,6 +323,14 @@ img.responsive {
     width: 100%;
   }
 
+  .employees {
+    flex-direction: column;
+  }
+
+  .employee {
+    width: 100%;
+  }
+
   .split {
     flex-direction: column;
   }
