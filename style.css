@@ -599,6 +599,13 @@ img.responsive {
 
   .navlist li {
     margin: 5px 0;
+    text-align: left;
+    width: 100%;
+  }
+
+  .navlist li a {
+    width: 100%;
+    display: inline-block;
   }
 
   .navlist li + li {

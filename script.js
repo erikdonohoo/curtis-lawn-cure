@@ -7,6 +7,13 @@
   const nav = document.querySelector('nav');
   const navList = document.querySelector('.navlist');
 
+  // body close nav
+  document.body.addEventListener('click', (event) => {
+    if (!event.target.contains(nav)) {
+      nav.classList.remove('open');
+    }
+  });
+
   // Go to contact form
   document.querySelector('.banner-btn').addEventListener('click', () => {
     location.hash = '';
@@ -16,7 +23,7 @@
   });
 
   // Manage opening, closing nav
-  const toggleNav = () => nav.classList.toggle('open');
+  const toggleNav = (event) => { nav.classList.toggle('open'); event.stopPropagation(); };
   document.querySelector('#nav-toggle').addEventListener('click', toggleNav);
   navList.addEventListener('click', toggleNav);
 
