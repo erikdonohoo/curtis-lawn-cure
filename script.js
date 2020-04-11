@@ -5,6 +5,14 @@
   const name = document.querySelector('input#name');
   const message = document.querySelector('textarea#message');
 
+  // Go to contact form
+  document.querySelector('.banner-btn').addEventListener('click', () => {
+    location.hash = '';
+    setTimeout(() => {
+      location.hash = 'contact';
+    });
+  });
+
   let isInvalid = true, isSubmitted = false;
 
   const handleChange = () => {
