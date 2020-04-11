@@ -4,6 +4,8 @@
   const email = document.querySelector('input#email');
   const name = document.querySelector('input#name');
   const message = document.querySelector('textarea#message');
+  const nav = document.querySelector('nav');
+  const navList = document.querySelector('.navlist');
 
   // Go to contact form
   document.querySelector('.banner-btn').addEventListener('click', () => {
@@ -12,6 +14,11 @@
       location.hash = 'contact';
     });
   });
+
+  // Manage opening, closing nav
+  const toggleNav = () => nav.classList.toggle('open');
+  document.querySelector('#nav-toggle').addEventListener('click', toggleNav);
+  navList.addEventListener('click', toggleNav);
 
   let isInvalid = true, isSubmitted = false;
 

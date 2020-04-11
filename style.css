@@ -109,6 +109,10 @@ nav {
   padding-left: 50px;
 }
 
+.nav-menu-icon {
+  display: none;
+}
+
 .navlist {
   list-style: none;
   display: flex;
@@ -543,8 +547,68 @@ img.responsive {
     text-align: center;
     padding: 10px 0;
   }
+
   nav {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: white;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.4);
+    z-index: 100;
+
+    /* Remove */
+    border-radius: 30px;
+  }
+
+  nav.open {
+    border-radius: 0;
+  }
+
+  nav.open .nav-menu-icon {
     display: none;
+  }
+
+  nav.open .navlist {
+    display: flex;
+  }
+
+  #nav-toggle {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2.5em;
+    padding: 10px;
+  }
+
+
+  .nav-menu-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    background-color: #1d5e22;
+    color: white;
+    border-radius: 30px;
+  }
+
+  .navlist {
+    display: none;
+    margin: 10px;
+  }
+
+  .navlist li {
+    margin: 5px 0;
+  }
+
+  .navlist li + li {
+    margin-left: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
   }
 }
 
