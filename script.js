@@ -7,6 +7,11 @@
   const nav = document.querySelector('nav');
   const navList = document.querySelector('.navlist');
 
+  const businessStartDate = new Date('1979-03-01 00:00:00');
+  const today = new Date();
+  const yearsSince = today.getFullYear() - businessStartDate.getFullYear();
+  document.querySelector('#years-research').textContent = yearsSince;
+
   // body close nav
   document.body.addEventListener('click', (event) => {
     if (!event.target.contains(nav)) {
