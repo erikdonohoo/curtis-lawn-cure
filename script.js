@@ -7,12 +7,8 @@
   const nav = document.querySelector('nav');
   const navList = document.querySelector('.navlist');
 
-  const businessStartDate = new Date();
-  businessStartDate.setDate(1);
-  businessStartDate.setFullYear(1979);
-  businessStartDate.setMonth(2);
   const today = new Date();
-  const yearsSince = today.getFullYear() - businessStartDate.getFullYear();
+  const yearsSince = today.getFullYear() - 1979;
   document.querySelector('#years-research').textContent = yearsSince;
 
   // body close nav
