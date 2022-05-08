@@ -50,7 +50,13 @@
     nextDiv.textContent = `$${priceInfo[1]}`;
     topDiv.append(nextDiv);
     nextDiv = document.createElement('div');
-    nextDiv.textContent = `$${priceInfo[2]} ($${priceInfo[3]})`;
+    nextDiv.textContent = `$${priceInfo[2]}`;
+    topDiv.append(nextDiv);
+    nextDiv = document.createElement('div');
+    nextDiv.textContent = `$${priceInfo[3]}`;
+    topDiv.append(nextDiv);
+    nextDiv = document.createElement('div');
+    nextDiv.textContent = `$${priceInfo[3]}`;
     topDiv.append(nextDiv);
     nextDiv = document.createElement('div');
     nextDiv.textContent = `$${priceInfo[4]}`;
@@ -81,17 +87,17 @@
     nextDiv = document.createElement('div');
     nextDiv.classList.add('row');
     innerDiv = document.createElement('div');
-    innerDiv.textContent = 'Late Spring Spray (Hydretain)';
+    innerDiv.textContent = 'Late Spring Spray';
     nextDiv.append(innerDiv);
     innerDiv = document.createElement('div');
-    innerDiv.textContent = `$${priceInfo[2]} ($${priceInfo[3]})`;
+    innerDiv.textContent = `$${priceInfo[2]}`;
     nextDiv.append(innerDiv);
     smallTable.append(nextDiv);
 
     nextDiv = document.createElement('div');
     nextDiv.classList.add('row');
     innerDiv = document.createElement('div');
-    innerDiv.textContent = 'Summer Sprays';
+    innerDiv.textContent = 'Hydretain';
     nextDiv.append(innerDiv);
     innerDiv = document.createElement('div');
     innerDiv.textContent = `$${priceInfo[3]}`;
@@ -101,10 +107,30 @@
     nextDiv = document.createElement('div');
     nextDiv.classList.add('row');
     innerDiv = document.createElement('div');
-    innerDiv.textContent = 'Fall Spray';
+    innerDiv.textContent = 'Early Summery Spray';
+    nextDiv.append(innerDiv);
+    innerDiv = document.createElement('div');
+    innerDiv.textContent = `$${priceInfo[3]}`;
+    nextDiv.append(innerDiv);
+    smallTable.append(nextDiv);
+
+    nextDiv = document.createElement('div');
+    nextDiv.classList.add('row');
+    innerDiv = document.createElement('div');
+    innerDiv.textContent = 'Late Summer Spray';
     nextDiv.append(innerDiv);
     innerDiv = document.createElement('div');
     innerDiv.textContent = `$${priceInfo[4]}`;
+    nextDiv.append(innerDiv);
+    smallTable.append(nextDiv);
+
+    nextDiv = document.createElement('div');
+    nextDiv.classList.add('row');
+    innerDiv = document.createElement('div');
+    innerDiv.textContent = 'Fall Spray';
+    nextDiv.append(innerDiv);
+    innerDiv = document.createElement('div');
+    innerDiv.textContent = `$${priceInfo[5]}`;
     nextDiv.append(innerDiv);
     smallTable.append(nextDiv);
   });
