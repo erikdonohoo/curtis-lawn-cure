@@ -114,7 +114,7 @@
     nextDiv = document.createElement('div');
     nextDiv.classList.add('row');
     innerDiv = document.createElement('div');
-    innerDiv.textContent = 'Early Summery Spray';
+    innerDiv.textContent = 'Early Summer Spray';
     nextDiv.append(innerDiv);
     innerDiv = document.createElement('div');
     innerDiv.textContent = `$${priceInfo[3] - 1}`;
